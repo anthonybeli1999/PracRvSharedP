@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">PracAsyncTaskRv</string>
+    <string name="app_name">PracRecyclerShared</string>
+    <string name="action_settings">Propiedades</string>
+    <string name="sp_color_bar">Barra_color</string>
+
     <string name="titulo1">Buscar Libro</string>
     <string name="titulo2">Detalle Libro</string>
     <string name="instrucciones">Ingrese el nombre del libro para buscar: </string>

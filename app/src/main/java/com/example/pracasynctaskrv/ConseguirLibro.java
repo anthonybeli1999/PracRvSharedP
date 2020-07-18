@@ -3,10 +3,6 @@ package com.example.pracasynctaskrv;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,7 +23,6 @@ public class ConseguirLibro extends AsyncTask<String,Void,String> {
         this.txtAutorLibro = new WeakReference<>(autorLibro);
         this.txtAnioLibro = new WeakReference<>(anioLibro);
         this.txtDescripcionLibro = new WeakReference<>(descripcionLibro);
-        //this.imgLibro = new WeakReference<>(imgLibro);
     }
 
     @Override
@@ -58,10 +53,6 @@ public class ConseguirLibro extends AsyncTask<String,Void,String> {
                     autores = volumeInfo.getString("authors");
                     anio = volumeInfo.getString("publishedDate");
                     descripcion = volumeInfo.getString("description");
-                    //foto = volumeInfo.getInt("smallThumbnail");
-
-                    //Picasso.get().load(foto).into((Target) imgLibro);
-
                     MainActivity.libros.add(new Libro(titulo,autores,anio,descripcion));
 
                 }catch (Exception e){
@@ -69,12 +60,9 @@ public class ConseguirLibro extends AsyncTask<String,Void,String> {
                 }
             }
 
-
-
             if (titulo != null && autores !=null){
 
             }else {
-
 
             }
 

@@ -1,7 +1,6 @@
 package com.example.pracasynctaskrv;
 
 import android.net.Uri;
-import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -63,12 +62,7 @@ public class UtilidadesRed {
                 }
             }
         }
-        //Log.d(LOG_TAG, libroJSON);
         return libroJSON;
     }
-
-
-
-
 }
 

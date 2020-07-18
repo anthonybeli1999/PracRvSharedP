@@ -1,24 +1,18 @@
 package com.example.pracasynctaskrv;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RvAdapter  extends RecyclerView.Adapter<RvAdapter.LibroViewHolder> implements View.OnClickListener {
+public class RvAdapter extends RecyclerView.Adapter<RvAdapter.LibroViewHolder> implements View.OnClickListener {
 
     private View.OnClickListener listener;
 
@@ -52,14 +46,6 @@ public class RvAdapter  extends RecyclerView.Adapter<RvAdapter.LibroViewHolder> 
         holder.autorlibro.setText(libros.get(position).autor);
         holder.anioLibro.setText(libros.get(position).anio);
         holder.descripcionLibro.setText(libros.get(position).descripcion);
-
-       // Drawable original = context.getResources().getDrawable(libros.get(position).foto,null);
-        //Bitmap originalBitmap = ((BitmapDrawable) original).getBitmap();
-
-        //RoundedBitmapDrawable roundedDrawable = RoundedBitmapDrawableFactory.create(context.getResources(), originalBitmap);
-        //roundedDrawable.setCornerRadius(originalBitmap.getHeight());
-
-        //holder.fotoLibro.setImageDrawable(roundedDrawable);
     }
 
     @Override
@@ -76,7 +62,6 @@ public class RvAdapter  extends RecyclerView.Adapter<RvAdapter.LibroViewHolder> 
         if(listener != null){
             listener.onClick(v);
         }
-
     }
 
     public static class LibroViewHolder extends RecyclerView.ViewHolder{
@@ -85,7 +70,6 @@ public class RvAdapter  extends RecyclerView.Adapter<RvAdapter.LibroViewHolder> 
         TextView autorlibro;
         TextView anioLibro;
         TextView descripcionLibro;
-        ImageView fotoLibro;
 
         LibroViewHolder(View itemView){
             super(itemView);
@@ -94,7 +78,6 @@ public class RvAdapter  extends RecyclerView.Adapter<RvAdapter.LibroViewHolder> 
             autorlibro = (TextView)itemView.findViewById(R.id.txtAutorLibro);
             anioLibro = (TextView)itemView.findViewById(R.id.txtAnioLibro);
             descripcionLibro = (TextView)itemView.findViewById(R.id.txtDescripcionLibro);
-            //fotoLibro = (ImageView) itemView.findViewById(R.id.imgLibro);
         }
     }
 
